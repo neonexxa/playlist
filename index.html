@@ -121,20 +121,8 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
-        //Page is loading start progress
-        document.onreadystatechange = function () {
-        if (document.readyState == “interactive”) {
-        NProgress.start(); //start progress bar
-        }
-        }
-
-        //when page is loaded stop progress 
-        var everythingLoaded = setInterval(function() {
-        if (/loaded|complete/.test(document.readyState)) {
-        clearInterval(everythingLoaded);
-        setTimeout(function(){NProgress.done()},2000);
-        }
-        }, 10);   
+        NProgress.start();
+        NProgress.done();   
     </script>
 
 </body>
